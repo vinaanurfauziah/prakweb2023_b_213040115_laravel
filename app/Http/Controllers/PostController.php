@@ -15,11 +15,22 @@ class PostController extends Controller
         ]);
     }
 
+    // public function show(Post $post)
+    // {
+    //     return view('post', [
+    //         "title" => "Single Post",
+    //         "post" => $post
+    //     ]);
+    // }
+
     public function show($slug)
-    {
-        return view('post', [
-            "title" => "Single Post",
-            "post" => Post::find($slug)
-        ]);
-    }
+{
+    $post = Post::where('slug', $slug)->firstOrFail();
+    
+    return view('post', [
+        "title" => "Single Post",
+        "post" => $post
+    ]);
+}
+
 }
