@@ -8,7 +8,7 @@
         <article class="mb-5 border-bottom pb-4">
             <h2><a href="/posts/<?php echo e($post->slug); ?>" class="text-decoration-none"><?php echo e($post->title); ?></a></h2>
             
-            <p>By. <a href="#" class="text-decoration-none"><?php echo e($post->user->name); ?></a> in <a href="/categories/<?php echo e($post->category->slug); ?>" class="text-decoration-none"><?php echo e($post->category->name); ?></a></p>
+            <p>By. <a href="/authors/<?php echo e($post->author->username); ?>" class="text-decoration-none"><?php echo e($post->author->name); ?></a> in <a href="/categories/<?php echo e($post->category->slug); ?>" class="text-decoration-none"><?php echo e($post->category->name); ?></a></p>
             
             <p><?php echo e($post->excerpt); ?></p>
 
