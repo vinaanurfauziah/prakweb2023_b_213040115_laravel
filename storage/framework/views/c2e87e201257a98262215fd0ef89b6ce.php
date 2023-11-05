@@ -2,7 +2,7 @@
 
 
 <?php $__env->startSection('container'); ?>
-    <h1 class="mb-5">Halaman Blog Posts</h1>    
+    <h1 class="mb-5"><?php echo e($title); ?></h1>    
 
     <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <article class="mb-5 border-bottom pb-4">
