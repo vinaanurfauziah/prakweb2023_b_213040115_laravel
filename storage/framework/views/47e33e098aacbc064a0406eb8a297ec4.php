@@ -15,6 +15,9 @@
           <li class="nav-item">
             <a class="nav-link <?php echo e(($title === "Posts")? 'active' : ''); ?>" href="/blog">Blog</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link <?php echo e(($title === "Categories")? 'active' : ''); ?>" href="/categories">Categories</a>
+          </li>
         </ul>
       </div>
     </div>
