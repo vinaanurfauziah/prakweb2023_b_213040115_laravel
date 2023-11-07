@@ -7,7 +7,7 @@
             <div class="col-md-8">
                 <h1 class="mb-3"><?php echo e($post->title); ?></h1>
 
-                <p>By. <a href="/authors/<?php echo e($post->author->username); ?>" class="text-decoration-none"><?php echo e($post->author->name); ?></a> in <a href="/categories/<?php echo e($post->category->slug); ?>" class="text-decoration-none"><?php echo e($post->category->name); ?></a></p>
+                <p>By. <a href="/posts?author=<?php echo e($post->author->username); ?>" class="text-decoration-none"><?php echo e($post->author->name); ?></a> in <a href="/categories/<?php echo e($post->category->slug); ?>" class="text-decoration-none"><?php echo e($post->category->name); ?></a></p>
 
                 <img src="https://source.unsplash.com/1200x400?<?php echo e($post->category->name); ?>" class="card-img-top" alt="<?php echo e($post->category->name); ?>" alt="<?php echo e($post->category->name); ?>" class="img-fluid">
 
