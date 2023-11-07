@@ -19,6 +19,12 @@
             <a class="nav-link <?php echo e(($active === "categories")? 'active' : ''); ?>" href="/categories">Categories</a>
           </li>
         </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="/login" class="nav-link <?php echo e(($active === "login")? 'active' : ''); ?>"><i class="bi bi-box-arrow-in-right"></i>Login</a>
+          </li>
+        </ul>
+        
       </div>
     </div>
   </nav><?php /**PATH C:\laragon\www\prakweb-laravel\resources\views/partials/navbar.blade.php ENDPATH**/ ?>
