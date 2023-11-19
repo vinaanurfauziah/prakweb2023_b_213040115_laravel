@@ -19,12 +19,34 @@
             <a class="nav-link <?php echo e(($active === "categories")? 'active' : ''); ?>" href="/categories">Categories</a>
           </li>
         </ul>
+
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a href="/login" class="nav-link <?php echo e(($active === "login")? 'active' : ''); ?>"><i class="bi bi-box-arrow-in-right"></i>Login</a>
+          <?php if(auth()->guard()->check()): ?>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Welcome back, <?php echo e(auth()->user()->name); ?> 
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-sidebar-reverse"></i>My Dashboard</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <form action="/logout" method="post">
+                  <?php echo csrf_field(); ?>
+                  <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right">
+                  </i>Logout</button>  
+                </form>
+              </li>
+            </ul>
           </li>
-        </ul>
+          <?php else: ?>  
+          <li class="nav-item">
+            <a href="/login" class="nav-link <?php echo e(($active === "login") ? 'active' : ''); ?>">
+              <i class="bi bi-box-arrow-in-right"></i> Login</a>
+          </li>
+         <?php endif; ?>
+          
         
       </div>
     </div>
-  </nav><?php /**PATH C:\laragon\www\prakweb-laravel\resources\views/partials/navbar.blade.php ENDPATH**/ ?>
+  </nav>
+<?php /**PATH C:\laragon\www\prakweb-laravel\resources\views/partials/navbar.blade.php ENDPATH**/ ?>

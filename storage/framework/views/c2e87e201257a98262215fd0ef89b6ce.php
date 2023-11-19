@@ -6,7 +6,7 @@
 
 <div class="row justify-content-center mb-3">
     <div class="col-md-6">
-        <form action="/posts">
+        <form action="/blog"> 
             <?php if(request('category')): ?>
                 <input type="hidden" name="category" value="<?php echo e(request('category')); ?>">
             <?php endif; ?>
